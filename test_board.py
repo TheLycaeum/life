@@ -146,6 +146,14 @@ def test_num_live_neighbours_r():
     val = life.num_live_neighbours(board, 1, 3)
     assert val == 3
 
+def test_num_live_neighbours_c():
+    board =[[True, False, False, True],
+            [True, True, True,  False],
+            [False, True, True, False],
+            [True, True, True, True]]
+    val = life.num_live_neighbours(board, 2, 2)
+    assert val == 6
+
     
 
 
