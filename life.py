@@ -12,7 +12,10 @@ def display(board):
         
 
 def alive(board, row, col):
-    return False
+    if board[row][col] == True:
+        return True
+    else:
+        return False
 
     
 
