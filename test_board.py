@@ -176,3 +176,13 @@ def test_apply_rules_rule1():
     board = life.apply_rules(board)
     assert not life.alive(board, 0, 0)
     
+
+def test_apply_rules_rule2_2_live_neighbours():
+    # Any live cell with two or three live neighbours lives on to the next generation.
+    board = [[True, True, True],
+             [False, False, False],
+             [False, False, False]]
+    assert life.alive(board, 0, 1)
+    board = life.apply_rules(board)
+    assert life.alive(board, 0, 1)
+
