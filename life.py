@@ -51,3 +51,14 @@ def num_live_neighbours(board, row, col):
     return  int(board[row-1][col-1])+ int(board[row-1][col])+ int(board[row-1][col+1])+ int(board[row][col+1])+ int(board[row+1][col+1])+ int(board[row+1][col])+ int(board[row+1][col-1])+ int(board[row][col-1])
     
 
+
+def create_new_board(size):
+    ret = []
+    for i in range(size):
+        cols = []
+        for j in range(size):
+            cols.append(False)
+        ret.append(cols)
+    return ret
+
+        
