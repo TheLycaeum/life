@@ -1,6 +1,7 @@
 def display(board):
-    return """...
-...
-..."""
+    size = len(board)
+    row = "."*size
+    disp = "\n".join([row] * size)
+    return disp
         
         
