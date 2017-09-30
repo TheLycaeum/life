@@ -195,3 +195,11 @@ def test_apply_rules_rule2_3_live_neighbours():
     board = life.apply_rules(board)
     assert life.alive(board, 0, 1)
 
+def test_apply_rules_rule3():
+    # Any live cell with more than three live neighbours dies, as if by overpopulation.
+    board = [[True, True, True],
+             [True, True, False],
+             [False, False, False]]
+    assert life.alive(board, 0, 1)
+    board = life.apply_rules(board)
+    assert not life.alive(board, 0, 1)
