@@ -35,7 +35,9 @@ def num_live_neighbours(board, row, col):
     if row == size and col == size:
         return  int(board[size-1][size]) + int(board[size-1][size-1]) + int(board[size][size-1])
 
-    
+    # Top edge
+    if row == 0:
+        return int(board[0][col-1]) + int(board[1][col-1]) + int(board[1][col]) + int(board[1][col+1]) + int(board[0][col+1])
         
     
 # neighbours
