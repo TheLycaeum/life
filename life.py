@@ -40,7 +40,7 @@ def num_live_neighbours(board, row, col):
         return int(board[0][col-1]) + int(board[1][col-1]) + int(board[1][col]) + int(board[1][col+1]) + int(board[0][col+1])
 
     if col == 0:
-        return 4
+        return int(board[row-1][0])+int(board[row-1][1])+int(board[row][1])+int(board[row+1][1])+int(board[row+1][0])
     
 # neighbours
 # keep_alive
