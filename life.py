@@ -71,7 +71,7 @@ def apply_rules(board):
         for col in range(len(board)):
             if alive(board, row, col) and num_live_neighbours(board, row, col) < 2:
                 kill(ret_board, row, col)
-            if alive(board, row, col) and num_live_neighbours(board, row, col) == 2:
+            if alive(board, row, col) and num_live_neighbours(board, row, col) in [2,3]:
                 birth(ret_board, row, col)
             
 
