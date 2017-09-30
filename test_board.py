@@ -98,7 +98,15 @@ def test_num_live_neighbours_bl():
              [False, False, True]]
     val = life.num_live_neighbours(board, 2, 0)
     assert val == 1
+
+def test_num_live_neighbours_br():
+    board = [[False, False, False],
+             [False, True, True],
+             [False, False, True]]
+    val = life.num_live_neighbours(board, 2, 2)
+    assert val == 2
     
+
     
   
 
