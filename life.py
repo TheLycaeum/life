@@ -65,11 +65,15 @@ def create_new_board(size):
 def apply_rules(board):
     ret_board = create_new_board(len(board))
     # Any live cell with fewer than two live neighbours dies, as if caused by underpopulation.
-    
+    # Any live cell with two or three live neighbours lives on to the next generation.
+
     for row in range(len(board)):
         for col in range(len(board)):
             if alive(board, row, col) and num_live_neighbours(board, row, col) < 2:
                 kill(ret_board, row, col)
+            if alive(board, row, col) and num_live_neighbours(board, row, col) == 2:
+                birth(ret_board, row, col)
+            
 
     return ret_board
                 
