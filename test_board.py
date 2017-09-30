@@ -30,4 +30,15 @@ def test_display_random_3x3():
              [True, False, True]]
     val = life.display(board)
     assert val == "X.X\n.X.\nX.X"
-    
+
+
+def test_alive_dead():
+    board = [[True, True, True],
+             [True, True, False],
+             [True, True, True]]
+    val = life.alive(board, 1,2)
+    assert val == False
+
+# alive
+# - Returns True or False
+# - an y,x position (row, column)
