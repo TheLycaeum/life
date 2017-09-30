@@ -22,6 +22,7 @@ def birth(board, row, col):
 
 def num_live_neighbours(board, row, col):
     size = len(board)-1
+
     if row == 0 and col == 0:
         return int(board[0][1]) + int(board[1][1]) + int(board[1][0])
 
@@ -31,6 +32,9 @@ def num_live_neighbours(board, row, col):
     if row == size and col == 0:
         return int(board[size-1][0]) + int(board[size-1][1]) + int(board[size][1])
         
+    if row == size and col == size:
+        return  int(board[size-1][size]) + int(board[size-1][size-1]) + int(board[size][size-1])
+
     
         
     
