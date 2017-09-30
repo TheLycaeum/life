@@ -67,13 +67,16 @@ def apply_rules(board):
     # Any live cell with fewer than two live neighbours dies, as if caused by underpopulation.
     # Any live cell with two or three live neighbours lives on to the next generation.
 
+    # Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
+
     for row in range(len(board)):
         for col in range(len(board)):
             if alive(board, row, col) and num_live_neighbours(board, row, col) < 2:
                 kill(ret_board, row, col)
             if alive(board, row, col) and num_live_neighbours(board, row, col) in [2,3]:
                 birth(ret_board, row, col)
-            
+            if not alive(board, row, col) and num_live_neighbours(board, row, col) == 3:
+                birth(ret_board, row, col)
 
     return ret_board
                 
