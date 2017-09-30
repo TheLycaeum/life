@@ -1,12 +1,13 @@
 def display(board):
-    if board[0][0]:
-        char = "X"
-    else:
-        char = "."
-    
-    size = len(board)
-    row = char*size
-    disp = "\n".join([row] * size)
-    return disp
+    ret = []
+    for row in board:
+        t_row = []
+        for col in row:
+            if col:
+                t_row.append("X")
+            else:
+                t_row.append(".")
+        ret.append("".join(t_row))
+    return "\n".join(ret)
         
         
