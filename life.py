@@ -1,0 +1,6 @@
+def display(board):
+    return """...
+...
+..."""
+        
+        
