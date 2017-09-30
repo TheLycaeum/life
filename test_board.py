@@ -155,6 +155,18 @@ def test_num_live_neighbours_c():
     assert val == 6
 
     
+def test_create_new_board():
+    board =[[True, False, False, True],
+            [True, True, True,  False],
+            [False, True, True, False],
+            [True, True, True, True]]
+    val = life.create_new_board(len(board))
+    assert val == [[False, False, False, False],
+                   [False, False, False, False],
+                   [False, False, False, False],
+                   [False, False, False, False]]
 
+
+    
 
     
