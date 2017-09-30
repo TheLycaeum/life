@@ -21,7 +21,13 @@ def birth(board, row, col):
     board[row][col] = True
 
 def num_live_neighbours(board, row, col):
-    return 1
+    size = len(board)
+    if row == 0 and col == 0:
+        return 1
+    if row == 0 and col == size-1:
+        return 2
+    
+        
     
 # neighbours
 # keep_alive
