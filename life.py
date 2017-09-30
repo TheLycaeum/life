@@ -14,11 +14,12 @@ def display(board):
 def alive(board, row, col):
     return board[row][col]
 
+def kill(board, row, col):
+    board[1][2] = False
     
-
-# neighbours
 # kill
 # birth
+# neighbours
 # keep_alive
 
 # if alive(cell)
