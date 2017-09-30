@@ -1,3 +1,5 @@
+import time
+
 def display(board):
     ret = []
     for row in board:
@@ -80,4 +82,20 @@ def apply_rules(board):
 
     return ret_board
                 
-        
+
+def main():
+    board = [[False, True, False, False],
+             [False, True, False, False],
+             [False, True, False, True],
+             [False, False, True, False]]
+
+    count = 1
+    while True:
+        print (count)
+        print (display(board))
+        board = apply_rules(board)
+        time.sleep(1)
+        count += 1
+
+if __name__ == "__main__":
+    main()
