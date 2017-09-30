@@ -166,7 +166,13 @@ def test_create_new_board():
                    [False, False, False, False],
                    [False, False, False, False]]
 
-
     
-
+def test_apply_rules_rule1():
+    # Any live cell with fewer than two live neighbours dies, as if caused by underpopulation.
+    board = [[True, True, True],
+             [False, False, False],
+             [False, False, False]]
+    assert life.alive(board, 0, 0)
+    board = life.apply_rules(board)
+    assert not life.alive(board, 0, 0)
     
