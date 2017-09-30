@@ -62,7 +62,13 @@ def test_kill2():
     life.kill(board, 0, 0)
     assert board[0][0] == False
 
-
+def test_birth():
+    board = [[False, False, False],
+             [False, False, False],
+             [False, False, False]]
+    assert board[1][2] == False
+    life.birth(board, 1, 2) 
+    assert board[1][2] == True
 
     
   

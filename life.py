@@ -16,8 +16,10 @@ def alive(board, row, col):
 
 def kill(board, row, col):
     board[row][col] = False
+
+def birth(board, row, col):
+    board[row][col] = True
     
-# kill
 # birth
 # neighbours
 # keep_alive
