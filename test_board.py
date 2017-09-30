@@ -23,3 +23,11 @@ def test_display_add_alive_3x3():
     val = life.display(board)
     assert val == "XXX\nXXX\nXXX"
     
+
+def test_display_random_3x3():
+    board = [[True, False, True],
+             [False, True, False],
+             [True, False, True]]
+    val = life.display(board)
+    assert val == "X.X\n.X.\nX.X"
+    
