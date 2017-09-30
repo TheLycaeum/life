@@ -19,9 +19,12 @@ def kill(board, row, col):
 
 def birth(board, row, col):
     board[row][col] = True
+
+def num_live_neighbours(board, row, col):
+    return 1
     
-# birth
 # neighbours
 # keep_alive
 
 # if alive(cell)
+
