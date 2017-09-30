@@ -39,6 +39,13 @@ def test_alive_dead():
     val = life.alive(board, 1,2)
     assert val == False
 
+def test_alive_alive():
+    board = [[False, False, False],
+             [False, False, True],
+             [False, False, False]]
+    val = life.alive(board, 1,2)
+    assert val == True
+
 # alive
 # - Returns True or False
 # - an y,x position (row, column)
