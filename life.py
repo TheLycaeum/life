@@ -45,6 +45,11 @@ def num_live_neighbours(board, row, col):
     if row == size:
         return int(board[size][col-1])+int(board[size-1][col-1])+int(board[size-1][col])+int(board[size-1][col+1])+int(board[size][col+1])
 
+    if col == size:
+        return int(board[row-1][col]) + int(board[row-1][col-1]) + int(board[row][col-1]) + int(board[row+1][col-1]) + int(board[row+1][col])
+
+
+
     
 # neighbours
 # keep_alive
