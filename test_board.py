@@ -46,6 +46,27 @@ def test_alive_alive():
     val = life.alive(board, 1,2)
     assert val == True
 
-# alive
-# - Returns True or False
-# - an y,x position (row, column)
+
+def test_kill():
+    board = [[False, False, False],
+             [False, False, True],
+             [False, False, False]]
+    assert board[1][2] == True
+    life.kill(board, 1, 2)
+    assert board[1][2] == False
+
+def test_kill2():
+    board = [[True, True],
+             [True, True]]
+    assert board[0][0] == True
+    life.kill(board, 0, 0)
+    assert board[0][0] == False
+
+
+
+    
+  
+
+    
+
+    
