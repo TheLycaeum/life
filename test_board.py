@@ -70,6 +70,14 @@ def test_birth():
     life.birth(board, 1, 2) 
     assert board[1][2] == True
 
+def test_num_live_neighbours_tl():
+    board = [[False, False, False],
+             [False, True, True],
+             [False, False, True]]
+    val = life.num_live_neighbours(board, 0, 0)
+    assert val == 1
+
+
     
   
 
