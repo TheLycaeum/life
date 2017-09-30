@@ -15,7 +15,7 @@ def alive(board, row, col):
     return board[row][col]
 
 def kill(board, row, col):
-    board[1][2] = False
+    board[row][col] = False
     
 # kill
 # birth
