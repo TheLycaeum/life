@@ -214,4 +214,12 @@ def test_apply_rules_rule3_2():
     board = life.apply_rules(board)
     assert not life.alive(board, 0, 2)
 
+def test_apply_rules_rule4():
+    # Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
+    board = [[True, False, True],
+             [False, True, False],
+             [False, False, False]]
+    assert not life.alive(board, 0, 1)
+    board = life.apply_rules(board)
+    assert life.alive(board, 0, 1)
 
